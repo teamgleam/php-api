@@ -1,5 +1,7 @@
 <?php
 
+namespace Gleam;
+
 class Gleam
 {
     public function __construct( $apiKey )
