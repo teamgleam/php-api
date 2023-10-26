@@ -8,5 +8,10 @@
         "php": "8.2.*",
         "php-curl-class/php-curl-class": "^9.18"
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "": "src/Gleam/"
+        }
+    }
 }
