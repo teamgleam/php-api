@@ -3,13 +3,13 @@
 namespace Gleam;
 
 use Curl\Curl;
-use Gleam\GleamBase;
 
 class Gleam extends GleamBase
 {
     public function __construct($apiKey)
     {
         parent::__construct($apiKey);
+        echo $apiKey;
     }
 
     public function _call( $method, $endpoint, $params )
