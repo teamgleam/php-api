@@ -9,6 +9,6 @@ class Gleam
 
     public function say_hello()
     {
-        return 'hello';
+        return 'say hello';
     }
 }
