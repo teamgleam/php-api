@@ -3,27 +3,19 @@
 namespace Gleam;
 
 use Curl\Curl;
+use Gleam\GleamBase;
 
-require_once 'Authentication.php';
-
-class Gleam
+class Gleam extends GleamBase
 {
-    private $key;
-
-    public $authentication;
-
-    public function __construct( $params )
+    public function __construct($apiKey)
     {
-        $this->apiKey = $params['apiKey'];
-
-        $this->authentication = new Authentication( $params );
+        parent::__construct($apiKey);
     }
 
     public function _call( $method, $endpoint, $params )
     {
         $curl = new Curl();
-        $curl->setHeader( 'apiKey', $this->apiKey );
-        $curl->{$method}( 'http://api.teamgleam.test/v1/' . $endpoint, $params );
+        $curl->{$method}( 'http://api.teamgleam.test/v1/', $params );
         return $curl->response;
     }
 }

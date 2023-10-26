@@ -2,7 +2,7 @@
 
 namespace Gleam;
 
-class Authentication extends Gleam
+class Authentication
 {
     public function authenticate( $mobile )
     {
