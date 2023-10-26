@@ -2,15 +2,24 @@
 
 namespace Gleam;
 
+use Curl\Curl;
+
 class Gleam
 {
-    public function __construct($apiKey)
+    protected $key;
+    public $authentication;
+
+    public function __construct( $apiKey, $options = [] )
     {
-        echo $apiKey;
+        $this->key = $apiKey;
+
+        $this->authentication = new Authentication();
     }
 
-    public function say_hello()
+    public function _call( $method, $endpoint, $params )
     {
-        return 'say hello';
+        $curl = new Curl();
+        $curl->{$method}( 'http://api.teamgleam.test/v1/' . $endpoint, $params );
+        return $curl->response;
     }
 }
