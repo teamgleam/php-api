@@ -10,4 +10,12 @@ class Authentication extends GleamBase
             'mobile'    => $mobile
         ]);
     }
+
+    public function verify( $userId, $code )
+    {
+        return $this->_call( 'post', 'authentication/verify', [
+            'user'      => $userId,
+            'code'      => $code
+        ]);
+    }
 }
