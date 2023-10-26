@@ -5,9 +5,10 @@
     "type": "library",
     "homepage": "https://teamgleam.co.uk",
     "require": {
-        "php": "8.2.*"
+        "php": "8.2.*",
+        "php-curl-class/php-curl-class": "^9.18"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Gleam\\": "src/"
