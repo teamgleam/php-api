@@ -2,20 +2,14 @@
 
 namespace Gleam;
 
-use Curl\Curl;
-
 class Gleam extends GleamBase
 {
-    public function __construct($apiKey)
-    {
-        parent::__construct($apiKey);
-        echo $apiKey;
-    }
+    public $authentication;
 
-    public function _call( $method, $endpoint, $params )
+    public function __construct( $apiKey )
     {
-        $curl = new Curl();
-        $curl->{$method}( 'http://api.teamgleam.test/v1/' . $endpoint, $params );
-        return $curl->response;
+        parent::__construct( $apiKey );
+
+        $this->authentication = new Authentication( $apiKey );
     }
 }

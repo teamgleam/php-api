@@ -6,7 +6,7 @@
     "homepage": "https://teamgleam.co.uk",
     "require": {
         "php": "8.2.*",
-        "php-curl-class/php-curl-class": "^9.18"
+        "php-curl-class/php-curl-class": "dev-master"
     },
     "minimum-stability": "dev",
     "autoload": {
