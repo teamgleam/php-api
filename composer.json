@@ -1,0 +1,11 @@
+{
+    "name": "teamgleam/php-api",
+    "description": "PHP API wrapper for Gleam",
+    "license": "MIT",
+    "type": "project",
+    "homepage": "https://teamgleam.co.uk",
+    "require": {
+        "php": "8.2.*",
+        "php-curl-class/php-curl-class": "^9.18"
+    }
+}
