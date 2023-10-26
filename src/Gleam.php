@@ -15,7 +15,7 @@ class Gleam extends GleamBase
     public function _call( $method, $endpoint, $params )
     {
         $curl = new Curl();
-        $curl->{$method}( 'http://api.teamgleam.test/v1/', $params );
+        $curl->{$method}( 'http://api.teamgleam.test/v1/' . $endpoint, $params );
         return $curl->response;
     }
 }
