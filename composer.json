@@ -2,7 +2,7 @@
     "name": "teamgleam/php-api",
     "description": "PHP API wrapper for Gleam",
     "license": "MIT",
-    "type": "project",
+    "type": "library",
     "homepage": "https://teamgleam.co.uk",
     "require": {
         "php": "8.2.*",
