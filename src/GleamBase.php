@@ -14,7 +14,7 @@ abstract class GleamBase
     {
         $this->apiKey = $params['apiKey'];
         $this->auth = $params['userAuth'];
-        $this->returnType = ( isset( $params['returnType'] ) && $params['returnType'] ) ? $params['returnType'] : 'object'
+        $this->returnType = ( isset( $params['returnType'] ) && $params['returnType'] ) ? $params['returnType'] : 'object';
     }
 
     protected function _call( $method, $endpoint, $params = [] )
