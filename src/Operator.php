@@ -13,4 +13,9 @@ class Operator extends GleamBase
     {
         return $this->_call( 'get', 'operator/' . $id . '/calendar', $params );
     }
+
+    public function diary( $id, $params = [] )
+    {
+        return $this->_call( 'get', 'operator/' . $id . '/diary', $params );
+    }
 }
