@@ -5,11 +5,13 @@ namespace Gleam;
 class Gleam extends GleamBase
 {
     public $authentication;
+    public $user;
 
-    public function __construct( $apiKey )
+    public function __construct( $params )
     {
-        parent::__construct( $apiKey );
+        parent::__construct( $params );
 
-        $this->authentication = new Authentication( $apiKey );
+        $this->authentication = new Authentication( $params );
+        $this->user = new User( $params );
     }
 }
