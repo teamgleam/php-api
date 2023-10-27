@@ -20,6 +20,7 @@ abstract class GleamBase
     protected function _call( $method, $endpoint, $params = [] )
     {
         $curl = new Curl();
+        $curl->setHeader( 'Content-Type', 'application/json' );
         $curl->setHeader( 'apiKey', $this->apiKey );
         if( $this->auth ){
             $curl->setBasicAuthentication( $this->auth );
