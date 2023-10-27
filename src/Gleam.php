@@ -6,6 +6,7 @@ class Gleam extends GleamBase
 {
     public $authentication;
     public $user;
+    public $operator;
 
     public function __construct( $params )
     {
@@ -13,5 +14,6 @@ class Gleam extends GleamBase
 
         $this->authentication = new Authentication( $params );
         $this->user = new User( $params );
+        $this->operator = new Operator( $params );
     }
 }
