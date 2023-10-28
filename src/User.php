@@ -9,8 +9,8 @@ class User extends GleamBase
         return $this->_call( 'get', 'users/me' );
     }
 
-    public function me_update( $params )
+    public function retrieve( $id )
     {
-        return $this->_call( 'put', 'users/me', $params );
+        return $this->_call( 'get', 'users/' . $id );
     }
 }
