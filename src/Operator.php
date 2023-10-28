@@ -6,16 +6,16 @@ class Operator extends GleamBase
 {
     public function retrieve( $id )
     {
-        return $this->_call( 'get', 'operator/' . $id );
+        return $this->_call( 'get', 'operators/' . $id );
     }
 
     public function calendar( $id, $params = [] )
     {
-        return $this->_call( 'get', 'operator/' . $id . '/calendar', $params );
+        return $this->_call( 'get', 'operators/' . $id . '/calendar', $params );
     }
 
     public function diary( $id, $params = [] )
     {
-        return $this->_call( 'get', 'operator/' . $id . '/diary', $params );
+        return $this->_call( 'get', 'operators/' . $id . '/diary', $params );
     }
 }
