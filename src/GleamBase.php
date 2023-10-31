@@ -9,11 +9,13 @@ abstract class GleamBase
     protected $apiKey;
     protected $auth;
     protected $returnType;
+    protected $baseUrl;
 
     protected function __construct( $params )
     {
         $this->apiKey = $params['apiKey'];
         $this->auth = $params['userAuth'];
+        $this->baseUrl = $params['baseUrl'];
         $this->returnType = ( isset( $params['returnType'] ) && $params['returnType'] ) ? $params['returnType'] : 'object';
     }
 
@@ -25,7 +27,7 @@ abstract class GleamBase
         if( $this->auth ){
             $curl->setBasicAuthentication( $this->auth );
         }
-        $curl->{$method}( 'http://api.teamgleam.test/v1/' . $endpoint, $params );
+        $curl->{$method}( $this->baseUrl . '/' . $endpoint, $params );
 
         if( $this->returnType == 'object' ){
             return $curl->response;
