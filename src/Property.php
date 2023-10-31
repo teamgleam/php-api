@@ -8,4 +8,9 @@ class Property extends GleamBase
     {
         return $this->_call( 'get', 'operators/' . $operator_id . '/properties' );
     }
+
+    public function retrieve( $id )
+    {
+        return $this->_call( 'get', 'properties/' . $id );
+    }
 }
