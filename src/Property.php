@@ -13,4 +13,9 @@ class Property extends GleamBase
     {
         return $this->_call( 'get', 'properties/' . $id );
     }
+
+    public function update( $id, $params = [] )
+    {
+        return $this->_call( 'put', 'properties/' . $id, $params );
+    }
 }
