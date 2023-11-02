@@ -8,7 +8,6 @@ class Gleam extends GleamBase
     public $user;
     public $operator;
     public $job;
-    public $customer;
     public $property;
 
     public $booking;
@@ -21,7 +20,6 @@ class Gleam extends GleamBase
         $this->user = new User( $params );
         $this->operator = new Operator( $params );
         $this->job = new Job( $params );
-        $this->customer = new Customer( $params );
         $this->property = new Property( $params );
         $this->booking = new Booking( $params );
     }
