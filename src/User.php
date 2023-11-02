@@ -21,6 +21,6 @@ class User extends GleamBase
 
     public function update( $id, $params = [] )
     {
-        return $this->_call( 'post', 'users/' . $id, $params );
+        return $this->_call( 'put', 'users/' . $id, $params );
     }
 }
