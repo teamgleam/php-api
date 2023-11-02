@@ -11,7 +11,7 @@ class Booking extends GleamBase
 
     public function update( $booking_id, $params = [] )
     {
-        return $this->_call( 'put', 'bookings/' . $booking_id );
+        return $this->_call( 'put', 'bookings/' . $booking_id, $params );
     }
 
     public function rebase( $booking_id, $params )
