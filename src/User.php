@@ -13,4 +13,14 @@ class User extends GleamBase
     {
         return $this->_call( 'post', 'me/devices', $params );
     }
+
+    public function retrieve( $id )
+    {
+        return $this->_call( 'get', 'users/' . $id );
+    }
+
+    public function update( $id, $params = [] )
+    {
+        return $this->_call( 'post', 'users/' . $id, $params );
+    }
 }
