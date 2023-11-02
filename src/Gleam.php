@@ -9,8 +9,8 @@ class Gleam extends GleamBase
     public $operator;
     public $job;
     public $property;
-
     public $booking;
+    public $invoice;
 
     public function __construct( $params )
     {
@@ -22,5 +22,6 @@ class Gleam extends GleamBase
         $this->job = new Job( $params );
         $this->property = new Property( $params );
         $this->booking = new Booking( $params );
+        $this->invoice = new Invoice( $params );
     }
 }
