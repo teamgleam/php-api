@@ -19,6 +19,11 @@ class Job extends GleamBase
         return $this->_call( 'post', 'jobs/' . $job_id . '/reassign', $params );
     }
 
+    public function complete( $job_id, $params = [] )
+    {
+        return $this->_call( 'post', 'jobs/' . $job_id . '/complete', $params );
+    }
+
     public function cancel( $job_id, $params = [] )
     {
         return $this->_call( 'post', 'jobs/' . $job_id . '/cancel', $params );
