@@ -8,4 +8,14 @@ class Invoice extends GleamBase
     {
         return $this->_call( 'get', 'invoices/' . $invoice_id );
     }
+
+    public function finalise( $invoice_id, $params )
+    {
+        return $this->_call( 'post', 'invoices/' . $invoice_id . '/finalise', $params );
+    }
+
+    public function void( $invoice_id, $params )
+    {
+        return $this->_call( 'post', 'invoices/' . $invoice_id . '/void', $params );
+    }
 }
