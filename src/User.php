@@ -29,4 +29,8 @@ class User extends GleamBase
         return $this->_call( 'post', 'users/' . $id . '/payment/card', $params );
     }
 
+    public function invoices( $id )
+    {
+        return $this->_call( 'post', 'users/' . $id . '/invoices' );
+    }
 }
