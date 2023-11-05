@@ -26,11 +26,6 @@ class User extends GleamBase
 
     public function payment_card_create( $id, $params = [] )
     {
-        return $this->_call( 'post', 'users/' . $id . '/payment/card', $params );
-    }
-
-    public function invoices( $id )
-    {
-        return $this->_call( 'post', 'users/' . $id . '/invoices' );
+        return $this->_call('post', 'users/' . $id . '/payment/card', $params);
     }
 }
