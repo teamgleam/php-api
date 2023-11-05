@@ -11,6 +11,7 @@ class Gleam extends GleamBase
     public $property;
     public $booking;
     public $invoice;
+    public $notification;
 
     public $invoiceItem;
     public $transaction;
@@ -28,5 +29,6 @@ class Gleam extends GleamBase
         $this->invoice = new Invoice( $params );
         $this->invoiceItem = new InvoiceItem( $params );
         $this->transaction = new Transaction( $params );
+        $this->notification = new Notification( $params );
     }
 }
