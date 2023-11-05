@@ -23,4 +23,10 @@ class User extends GleamBase
     {
         return $this->_call( 'put', 'users/' . $id, $params );
     }
+
+    public function payment_card_create( $id, $params = [] )
+    {
+        return $this->_call( 'post', 'users/' . $id . '/payment/card', $params );
+    }
+
 }
